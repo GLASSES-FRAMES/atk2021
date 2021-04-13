@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### David Test ###
+/src/main/webapp/WEB-INF/views/david/localtest
+
