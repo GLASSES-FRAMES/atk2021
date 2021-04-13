@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<div>[모의고사]</div>
+<div style="font-weight:bold;margin-bottom:20px;">[찍어서 많이 맞춘 수포자 찾기]</div>
 <div id="result"></div>
 
 
@@ -53,22 +53,20 @@ function solution(answers) {
                     if(a > b) return 1;
                     if(a === b) return 0;
                     if(a < b) return -1;
-                });
-    
-    console.log(user_1);
-    console.log(user_2);
-    console.log(user_3);
-
-    // console.log(`tempArr: ${tempArr}`);
+                });    
 
     for(var t=0;t<tempArr.length;t++){
         for(var u=1;u<=tempArr.length;u++){
             var res = eval("user_"+u);
             // var res = (new Function ('user_'+u))();
             // var res = window["user_" + u];
+
             if(res.solcount == tempArr[t]) {
-                console.log(`수포자 ${res.supo}은 ${res.solcount}문제를 맞췄습니다.`);
                 $("#result").append("<div>수포자 "+res.supo+"은 "+res.solcount+"문제를 맞췄습니다.</div>");
+
+                if(t == tempArr.length-1){
+                    $("#result").append("<div style='margin-top:10px;color:blue'>따라서 가장 문제를 많이 맞힌 사람은 수포자 "+res.supo+" 입니다.</div>");
+                }
             }
         }
     }
