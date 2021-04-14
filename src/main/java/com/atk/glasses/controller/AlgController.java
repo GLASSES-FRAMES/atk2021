@@ -18,6 +18,6 @@ public class AlgController {
 
     @RequestMapping(value="/david")
     public String getDavidAlg()throws Exception{
-        return "david/algorithm";
+        return "david/algorithm_mocktest";
     }
 }
