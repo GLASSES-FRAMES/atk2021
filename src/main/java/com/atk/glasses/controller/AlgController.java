@@ -11,6 +11,11 @@ public class AlgController {
         return "zero/alg1";
     }
 
+    @RequestMapping(value="/alg2")
+    public String getZeroAlg_2()throws Exception{
+        return "zero/alg2";
+    }
+
     @RequestMapping(value="/david")
     public String getDavidAlg()throws Exception{
         return "david/algorithm";
