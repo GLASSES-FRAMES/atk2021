@@ -28,17 +28,29 @@ function solution(n, lost, reserve) {
     let ansWerTemp = 0;
     let reserveTemp = reserve;
 
+    /*******************************
+      @ 가져온 사람중에서 도난당한 사람은 제외한 필터
+    *******************************/
+    let reserveAfterFileter = reserveTemp.filter(param => (lost.indexOf(param) == -1));
+
+    /*******************************
+      @ 체육 수업 참여할수 있는 사람 반복문
+      @ 가져오지 않는 사람 기준으로
+    *******************************/
     for(i=0; i<lost.length; i++){
-        if(reserveTemp.indexOf(lost[i]-1) != -1){
+        if(reserveAfterFileter.indexOf(lost[i]-1) != -1){
             ansWerTemp++;
-        }else if(reserveTemp.indexOf(lost[i]+1) != -1){
+        }else if(reserveAfterFileter.indexOf(lost[i]+1) != -1){
             ansWerTemp++;
 
-            const tmp = reserveTemp.indexOf(lost[i]+1);
-            reserveTemp.splice(tmp, 1);
+            let tmp = reserveAfterFileter.indexOf(lost[i]+1);
+            reserveAfterFileter.splice(tmp, 1);
         }
     }
 
+    /******************************
+      @ 가져오지 않은 사람중 빌리게된 사람 + 가져온 사람
+    *******************************/
     answer = answer+ansWerTemp;
     // console.log(answer);
     return answer;
