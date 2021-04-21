@@ -7,10 +7,10 @@
 <script src="/js/jquery-3.6.0.js"></script>
 <script>
     $(document).ready(function(){
-        //alg.setProblem();
+        alg.setProblem();
         //console.log(alg.add(1));
         //console.log(alg.addThruCall(1));
-        solution([2,3,2,1]);
+        //solution([2,3,2,1]);
     });
 
 var alg = {
