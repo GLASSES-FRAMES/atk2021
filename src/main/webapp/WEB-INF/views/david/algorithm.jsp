@@ -12,7 +12,7 @@
 
 <div>[난 통과 모대 틀렸어 먼저가]</div>
 <div id="result">you go first</div>
-
+test
 
 
 <script>
