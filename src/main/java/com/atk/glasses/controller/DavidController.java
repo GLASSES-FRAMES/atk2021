@@ -11,4 +11,9 @@ public class DavidController {
         return "david/algorithm_mocktest";
     }
 
+    @RequestMapping(value="/nthk")
+    public String getDavidAlg_()throws Exception{
+        return "david/al_nth_k";
+    }
+
 }
