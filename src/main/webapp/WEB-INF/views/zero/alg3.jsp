@@ -71,14 +71,12 @@ function solution(n, lost, reserve) {
         var rev = re_arr.indexOf(crr);
         var rep = re_arr.indexOf(crr-1);
         var ren = re_arr.indexOf(crr+1);
-        if(rev == -1){//여벌과 잃어버린 사람이 같은경우를 제외
-            if(rep == -1 && ren == -1){
-                lostCnt++;
-            }else if(rep > -1){
-                re_arr.splice(rep,1);
-            }else if(ren > -1){
-                re_arr.splice(ren,1);
-            }
+        if(rep == -1 && ren == -1){
+            lostCnt++;
+        }else if(rep > -1){
+            re_arr.splice(rep,1);
+        }else if(ren > -1){
+            re_arr.splice(ren,1);
         }
     }
     answer = n - lostCnt;
