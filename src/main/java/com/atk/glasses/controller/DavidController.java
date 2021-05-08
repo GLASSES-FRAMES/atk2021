@@ -21,4 +21,9 @@ public class DavidController {
         return "david/al_hate_number";
     }
 
+    @RequestMapping(value = "/pocketmon")
+    public String getDavidAlg_() throws Exception {
+        return "david/al_pocketmon";
+    }
+
 }
