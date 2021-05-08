@@ -6,14 +6,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class DavidController {
 
-    @RequestMapping(value="/david")
-    public String getDavidAlg()throws Exception{
+    @RequestMapping(value = "/david")
+    public String getDavidAlg() throws Exception {
         return "david/algorithm_mocktest";
     }
 
-    @RequestMapping(value="/nthk")
-    public String getDavidAlg_()throws Exception{
+    @RequestMapping(value = "/nthk")
+    public String getDavidAlg_() throws Exception {
         return "david/al_nth_k";
+    }
+
+    @RequestMapping(value = "/hate")
+    public String getDavidAlg_() throws Exception {
+        return "david/al_hate_number";
     }
 
 }
